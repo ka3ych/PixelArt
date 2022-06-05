@@ -1,0 +1,62 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+  }
+  div{
+    width: 20px;
+    height: 20px;
+    margin:0;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+    position: relative;
+  }
+  input{
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+  }
+  input ~ label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #44d0e2;
+    outline: 1px solid #49dde2;
+  }
+  label:hover{
+    background-color: #63e7e7;
+  }
+  label:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  input:checked ~ label {
+    background-color: white;
+    outline: 1px solid rgb(190, 249, 255);
+  }
+  @media (max-width: 500px) {
+      .frame {
+          width: 340px;
+          height: 340px;
+          margin-left: -180px;
+      }
+      div {
+          width: 17px;
+          height: 17px;
+      }
+  }
